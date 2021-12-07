@@ -45,10 +45,10 @@ function Repository() {
  //         <li key={nodes.primaryLanguage.id}></li>
 
   return (
-      <div className="pl-list">
+    <div>
         {data.repositoryOwner.repositories.nodes.map(nodes => (
           <>
-          
+          <div className="pl-list">
            <Card variant="outlined" >
             <CardContent>
               <Typography key={nodes.id} sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -62,10 +62,11 @@ function Repository() {
               </Typography>
             </CardContent>
             </Card>
-            
+            </div>
           </>
         ))}
-      </div>  
+        
+    </div>
   );
 }
 
