@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import "./productList.css";
 import Product from "../product/Product";
-import { products } from "../../data";
 import axios from "axios";
 
 class Productss extends Component {

@@ -1,3 +1,4 @@
+import React from "react";
 import "./about.css";
 import Aboutpic from "../../img/ab.JPG";
 

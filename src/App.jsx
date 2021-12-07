@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
@@ -5,6 +6,9 @@ import Intro from "./components/intro/Intro";
 import ProductList from "./components/productList/ProductList";
 import Toggle from "./components/toggle/Toggle";
 import { ThemeContext } from "./context";
+import { ApolloProvider } from "@apollo/react-hooks";
+import client from "./components/product/client"
+import { Repository } from "./components/product/Repository";
 
 const App = () => {
   const theme = useContext(ThemeContext);
@@ -16,11 +20,15 @@ const App = () => {
         color: darkMode && "white",
       }}
     >
-      <Toggle />
+      {/*<Toggle />
       <Intro />
       <About />
       <ProductList />
-      <Contact />
+      <Contact />*/}
+      <ProductList />
+      <ApolloProvider client={client}>
+        <Repository/>
+      </ApolloProvider>
     </div>
   );
 };
