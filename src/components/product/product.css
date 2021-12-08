@@ -2,19 +2,25 @@
   width: 10%;
   height: 20vh;
   margin: 20px 10px;
-  border: 2px solid #edf0f2;
+  border: 2px solid #0000;
   border-radius: 6px 6px 6px 6px;
   overflow: hidden;
-  align-items: stretch;
+  align-items: normal;
 }
 .pl {
   padding: 50px 100px;
   display: flex;
   flex-direction: column;
+  margin: auto;
   align-items: center;
   text-align: center;
 }
-
+.pl-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .title {
   margin-top: 2%;
   margin-left: 4%;

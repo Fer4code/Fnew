@@ -25,7 +25,6 @@ const App = () => {
       <About />
       <ProductList />
       <Contact />*/}
-      <ProductList />
       <ApolloProvider client={client}>
         <Repository/>
       </ApolloProvider>

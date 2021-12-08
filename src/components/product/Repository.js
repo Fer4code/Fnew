@@ -8,6 +8,10 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import "./product.css";
+import Grid from '@mui/material/Grid';
+import { CardActionArea } from "@mui/material";
+import Skeleton from '@mui/material/Skeleton';
+
 
 
 const REPOSITORY_QUERY = gql`
@@ -20,10 +24,9 @@ const REPOSITORY_QUERY = gql`
         name
         primaryLanguage {
           name
-          id
+          color
         }
         updatedAt
-        createdAt
       }
     }
   }
@@ -35,8 +38,89 @@ const REPOSITORY_QUERY = gql`
 function Repository() {
   const { data, loading, error } = useQuery(REPOSITORY_QUERY);
 
-  if (error) return <div>error...</div>;
-  if (loading || !data) return <div>loading...</div>;
+  if (error) return (
+    <div>
+      <Grid container spacing={2}
+    direction="row"
+    justifyContent="center"
+    alignItems="center"
+    >
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />      
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />      
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />      
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />      
+      </Grid>
+    </Grid>
+    error...
+    </div>
+  )
+  if (loading || !data) return (
+    <div>
+      <Grid container spacing={2}
+    direction="row"
+    justifyContent="center"
+    alignItems="center"
+    >
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />      
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />      
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />      
+      </Grid>
+      <Grid item md={4} s={6}>
+      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+      <Skeleton width="42%" />
+      <Skeleton width="42%" />      
+      </Grid>
+    </Grid>
+    loading...
+    </div>
+    
+    )
 
  // return <pre>{JSON.stringify(data, null, 2)}</pre>;
  // <li key={nodes.id}>{nodes.name}</li>
@@ -45,28 +129,38 @@ function Repository() {
  //         <li key={nodes.primaryLanguage.id}></li>
 
   return (
-    <div>
+    <>
+    
+    <Grid container spacing={4} direction='row' alignItems="center" 
+    justifyContent="space-around" style={{padding: "5%"}}>
+      <Grid item md={11}>
+        <Typography variant="h4" color="initial" align="center">
+        You can Go to my GitHub Account or find my latest repos here
+        </Typography>
+      </Grid>
         {data.repositoryOwner.repositories.nodes.map(nodes => (
           <>
-          <div className="pl-list">
-           <Card variant="outlined" >
-            <CardContent>
-              <Typography key={nodes.id} sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-              {nodes.updatedAt}
-              </Typography>
-              <Typography variant="h5" component="div">
-                {nodes.name}
-              </Typography>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                {nodes.primaryLanguage.name}
-              </Typography>
-            </CardContent>
-            </Card>
-            </div>
+          <Grid item key={nodes.id} md={4} s={6} align="center" >
+              <Card raised="true" style={{ width: '60%'}}>
+                <CardActionArea href={nodes.url}>
+                  <CardContent>
+                    <Typography key={nodes.id} sx={{ fontSize: 10 }} color="text.secondary" gutterBottom>
+                      {nodes.updatedAt}
+                    </Typography>
+                    <Typography variant="h6" component="div">
+                      {nodes.name}
+                    </Typography>
+                    <Typography sx={{ mb: 1.5 }} color={nodes.primaryLanguage.color}>
+                      {nodes.primaryLanguage.name}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                </Card>
+            </Grid>
           </>
         ))}
-        
-    </div>
+    </Grid>
+    </>
   );
 }
 
