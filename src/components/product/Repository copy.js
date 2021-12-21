@@ -7,7 +7,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
+import "./product.css";
 import Grid from '@mui/material/Grid';
 import { CardActionArea } from "@mui/material";
 import Skeleton from '@mui/material/Skeleton';
@@ -131,7 +131,8 @@ function Repository() {
   return (
     <>
     
-    <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
+    <Grid container spacing={4} direction='row' alignItems="center" 
+    justifyContent="space-around" style={{padding: "5%"}}>
       <Grid item md={11}>
         <Typography variant="h4" color="initial" align="center">
         You can Go to my GitHub Account or find my latest repos here
@@ -139,11 +140,11 @@ function Repository() {
       </Grid>
         {data.repositoryOwner.repositories.nodes.map(nodes => (
           <>
-          <Grid item key={nodes.id} md={4} s={6} align="center">
-              <Card raised="true" >
+          <Grid item key={nodes.id} md={4} s={6} align="center" >
+              <Card raised="true" style={{ width: '60%'}}>
                 <CardActionArea href={nodes.url}>
                   <CardContent>
-                    <Typography key={nodes.id} color="text.secondary" gutterBottom>
+                    <Typography key={nodes.id} sx={{ fontSize: 10 }} color="text.secondary" gutterBottom>
                       {nodes.updatedAt}
                     </Typography>
                     <Typography variant="h6" component="div">
