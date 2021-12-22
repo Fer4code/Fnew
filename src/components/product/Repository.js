@@ -1,13 +1,10 @@
 import React from "react";
 import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/react-hooks";
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
+import CircleIcon from '@mui/icons-material/Circle';
 import Grid from '@mui/material/Grid';
 import { CardActionArea } from "@mui/material";
 import Skeleton from '@mui/material/Skeleton';
@@ -32,12 +29,20 @@ const REPOSITORY_QUERY = gql`
   }
 }
 `;
-
+const skeleton = (
+  <>
+  <Grid item md={4} s={6} align="center">
+    <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
+    <Skeleton width={210} />
+    <Skeleton width={210} />
+  </Grid>
+  </>
+)
 
 
 function Repository() {
   const { data, loading, error } = useQuery(REPOSITORY_QUERY);
-
+  console.log(error)
   if (error) return (
     <div>
       <Grid container spacing={2}
@@ -80,46 +85,21 @@ function Repository() {
     </div>
   )
   if (loading || !data) return (
-    <div>
-      <Grid container spacing={2}
-    direction="row"
-    justifyContent="center"
-    alignItems="center"
-    >
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />
+    <>
+    <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
+      <Grid item md={11}>
+        <Typography variant="h4" color="initial" align="center">
+        You can Go to my GitHub Account or find my latest repos here
+        </Typography>
       </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />
-      </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />      
-      </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />      
-      </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />      
-      </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />      
-      </Grid>
+        {skeleton}
+        {skeleton}
+        {skeleton}
+        {skeleton}
+        {skeleton}
+        {skeleton}
     </Grid>
-    loading...
-    </div>
-    
+    </>
     )
 
  // return <pre>{JSON.stringify(data, null, 2)}</pre>;
@@ -130,7 +110,6 @@ function Repository() {
 
   return (
     <>
-    
     <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
       <Grid item md={11}>
         <Typography variant="h4" color="initial" align="center">
@@ -149,6 +128,7 @@ function Repository() {
                     <Typography variant="h6" component="div">
                       {nodes.name}
                     </Typography>
+                    
                     <Typography sx={{ mb: 1.5 }} color={nodes.primaryLanguage.color}>
                       {nodes.primaryLanguage.name}
                     </Typography>
