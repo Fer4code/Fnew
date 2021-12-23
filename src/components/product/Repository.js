@@ -39,58 +39,37 @@ const skeleton = (
   </>
 )
 
+const title = (
+  <Typography variant="h4" color="initial" align="center">
+        You can Go to my GitHub Account or find my latest repos here
+        </Typography>
+)
 
 function Repository() {
   const { data, loading, error } = useQuery(REPOSITORY_QUERY);
   console.log(error)
   if (error) return (
-    <div>
-      <Grid container spacing={2}
-    direction="row"
-    justifyContent="center"
-    alignItems="center"
-    >
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />
+    <>
+    <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
+      <Grid item md={11}>
+        <Typography variant="h4" color="initial" align="center">
+        You can Go to my GitHub Account
+        </Typography>
       </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />
-      </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />      
-      </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />      
-      </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />      
-      </Grid>
-      <Grid item md={4} s={6}>
-      <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-      <Skeleton width="42%" />
-      <Skeleton width="42%" />      
-      </Grid>
+        {skeleton}
+        {skeleton}
+        {skeleton}
+        {skeleton}
+        {skeleton}
+        {skeleton}
     </Grid>
-    error...
-    </div>
+    </>
   )
   if (loading || !data) return (
     <>
     <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
       <Grid item md={11}>
-        <Typography variant="h4" color="initial" align="center">
-        You can Go to my GitHub Account or find my latest repos here
-        </Typography>
+        {title}
       </Grid>
         {skeleton}
         {skeleton}
@@ -112,9 +91,7 @@ function Repository() {
     <>
     <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
       <Grid item md={11}>
-        <Typography variant="h4" color="initial" align="center">
-        You can Go to my GitHub Account or find my latest repos here
-        </Typography>
+        {title}
       </Grid>
         {data.repositoryOwner.repositories.nodes.map(nodes => (
           <>
