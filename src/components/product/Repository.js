@@ -90,25 +90,44 @@ function Repository() {
   return (
     <>
     <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
-      <Grid item md={11}>
+      <Grid item md={11} >
         {title}
       </Grid>
+      
         {data.repositoryOwner.repositories.nodes.map(nodes => (
           <>
           <Grid item key={nodes.id} md={4} s={6} align="center">
-              <Card raised="true" >
+          <Card raised="true" >
                 <CardActionArea href={nodes.url}>
                   <CardContent>
-                    <Typography key={nodes.id} color="text.secondary" gutterBottom>
-                      {nodes.updatedAt}
-                    </Typography>
-                    <Typography variant="h6" component="div">
+                    
+                    <Typography variant="h6" component="div" align="left" sx={{ mb: 1.5 }}>
                       {nodes.name}
                     </Typography>
-                    
-                    <Typography sx={{ mb: 1.5 }} color={nodes.primaryLanguage.color}>
-                      {nodes.primaryLanguage.name}
-                    </Typography>
+                    <Grid container spacing={18}>
+                      <Grid item s={6}>
+                          <Typography key={nodes.id} color="text.secondary" align="left">
+                          Language:
+                        </Typography>
+                      </Grid>
+                      <Grid item s={6}>
+                          <Typography color={nodes.primaryLanguage.color} align="right">
+                          {nodes.primaryLanguage.name}
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                    <Grid container spacing={15}>
+                      <Grid item s={6}>
+                          <Typography variant="body2" key={nodes.id} color="text.secondary" align="left">
+                          Updated at:
+                        </Typography>
+                      </Grid>
+                      <Grid item s={6}>
+                          <Typography key={nodes.id} variant="body2" color="text.secondary" align="right">
+                          {nodes.updatedAt}
+                        </Typography>
+                      </Grid>
+                    </Grid>
                   </CardContent>
                 </CardActionArea>
                 </Card>
