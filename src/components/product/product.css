@@ -1,3 +1,35 @@
+.r-bgd {
+  background-color: #333738;
+  padding: 10%;
+  max-height: 60vh;
+  min-height: 60vh;
+}
+.r-bg {
+  background-color: #a7b5b8;
+  padding: 10%;
+  max-height: 60vh;
+}
+.c-bgl {
+  background-color: #ffffff;
+}
+.c-bgd {
+  background-color: #706f70;
+}
+.t-bgl {
+  color: black;
+}
+.t-bgd {
+  color: white;
+}
+.st-bdd {
+  color: #e0e0e0;
+}
+.st-bd {
+  color: #797979;
+}
+.stl-bd {
+  color: #979797;
+}
 .p {
   width: 10%;
   height: 20vh;

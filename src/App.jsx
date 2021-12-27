@@ -20,8 +20,8 @@ const App = () => {
         color: darkMode && "white",
       }}
     >
-      {/*<Toggle />
-      <Intro />
+      <Toggle />
+      {/*<Intro />
       <About />
       <ProductList />
       <Contact />*/}
