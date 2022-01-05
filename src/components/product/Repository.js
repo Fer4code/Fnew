@@ -89,26 +89,26 @@ function Repository() {
 
   return (
     <>
-    <Grid container spacing={4} className={darkMode ? 'r-bg' : 'r-bgd'} style={{padding: "10%"}} justifyContent="center" justify="space-around" alignItems="center" alignContent="center">
+    <Grid container spacing={4} className={darkMode ? 'r-bgd' : 'r-bg'} style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: '10%', paddingTop: '5%'}} justifyContent="center" justify="space-around" alignItems="center" alignContent="center">
       <Grid item md={11} >
-      <Typography variant="h4" className={darkMode ? 't-bgl' : 't-bgd'} align="center">
+      <Typography variant="h4" className={darkMode ? 't-bgd' : 't-bgl'} align="center">
         You can Go to my GitHub Account or find my latest repos here
         </Typography>
       </Grid>
       
         {data.repositoryOwner.repositories.nodes.map(nodes => (
           <>
-          <Grid item key={nodes.id} md={4} s={11} style={{minWidth: "350px" }}>
+          <Grid item key={nodes.id} md={4} s={11} className="c-item">
           <Card raised="true"  >
                 <CardActionArea href={nodes.url} >
-                  <CardContent className={darkMode ? 'c-bgl' : 'c-bgd'}>
+                  <CardContent className={darkMode ? 'c-bgd' : 'c-bgl'}>
                     
-                    <Typography variant="h6" className={darkMode ? 't-bgl' : 't-bgd'} component="div" align="left" sx={{ mb: 1.5 }}>
+                    <Typography variant="h6" className={darkMode ? 't-bgd' : 't-bgl'} component="div" align="left" sx={{ mb: 1.5 }}>
                       {nodes.name}
                     </Typography>
                     <Grid container spacing={9} direction="row" justifyContent="space-between" alignItems="center">
                       <Grid item s={8}>
-                          <Typography key={nodes.id} className={darkMode ? 'st-bd' : 't-bgd'} align="left">
+                          <Typography key={nodes.id} className={darkMode ? 'st-bgd' : 't-bd'} align="left">
                           Language:
                         </Typography>
                       </Grid>
@@ -120,12 +120,12 @@ function Repository() {
                     </Grid>
                     <Grid container spacing={0} direction="row" justifyContent="space-between" alignItems="center">
                       <Grid item s={6}>
-                          <Typography variant="body2" key={nodes.id} className={darkMode ? 'stl-bd' : 'st-bdd'} >
+                          <Typography variant="body2" key={nodes.id} className={darkMode ? 'stl-bdd' : 'st-bd'} >
                           Updated at:
                         </Typography>
                       </Grid>
                       <Grid item s={6} >
-                          <Typography key={nodes.id} variant="body2" className={darkMode ? 'stl-bd' : 'st-bdd'} >
+                          <Typography key={nodes.id} variant="body2" className={darkMode ? 'stl-bdd' : 'st-bd'} >
                           {nodes.updatedAt}
                         </Typography>
                       </Grid>

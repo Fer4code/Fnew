@@ -20,14 +20,13 @@ const App = () => {
         color: darkMode && "white",
       }}
     >
-      <Toggle />
-      {/*<Intro />
+    <Toggle />
+      <Intro />
       <About />
-      <ProductList />
-      <Contact />*/}
       <ApolloProvider client={client}>
         <Repository/>
       </ApolloProvider>
+      <Contact />
     </div>
   );
 };
