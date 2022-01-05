@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import { CardActionArea } from "@mui/material";
 import Skeleton from '@mui/material/Skeleton';
 import { ThemeContext } from '../../context'
+import "./product.css";
 
 
 
@@ -32,10 +33,10 @@ const REPOSITORY_QUERY = gql`
 `;
 const skeleton = (
   <>
-  <Grid item md={4} s={6} align="center">
-    <Skeleton animation="wave" variant="rectangular" width={210} height={80} />
-    <Skeleton width={210} />
-    <Skeleton width={210} />
+  <Grid item md={4} s={11} align="center">
+    <Skeleton animation="wave" variant="rectangular" width={400} height={80} />
+    <Skeleton width={400} />
+    <Skeleton width={400} />
   </Grid>
   </>
 )
@@ -65,9 +66,9 @@ function Repository() {
   )
   if (loading || !data) return (
     <>
-    <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
+    <Grid container spacing={4} className={darkMode ? 'r-bgd' : 'r-bg'} style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: '10%', paddingTop: '5%'}} justifyContent="center" justify="space-around" alignItems="center" alignContent="center">
       <Grid item md={11}>
-      <Typography variant="h4" className={darkMode ? 't-bgl' : 't-bgd'} align="center">
+      <Typography variant="h4" className={darkMode ? 't-bgd' : 't-bgl'} align="center">
         You can Go to my GitHub Account or find my latest repos here
         </Typography>
       </Grid>
