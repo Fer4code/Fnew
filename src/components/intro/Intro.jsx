@@ -30,7 +30,7 @@ const darkMode = theme.state.darkMode;
         </div>
       </div>
       <div className="i-right">
-        <div className={darkMode ? 'i-bg' : 'i-bgd'}></div>
+        <div className={darkMode ? 'i-bgd' : 'i-bg'}></div>
         <img src={Me} alt="" className="i-img" />
       </div>
     </div>

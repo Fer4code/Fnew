@@ -11,8 +11,6 @@ import { ThemeContext } from '../../context'
 import "./product.css";
 
 
-
-
 const REPOSITORY_QUERY = gql`
 {
   repositoryOwner(login: "F3RN4ND02") {
@@ -137,6 +135,8 @@ function Repository() {
             </Grid>
           </>
         ))}
+            <Typography variant="h6" className={darkMode ? 'stl-bdd' : 'st-bd'} style={{marginTop: "3%"}} >Provided by GitGraphQL API</Typography>
+
     </Grid>
     </>
   );
