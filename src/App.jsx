@@ -8,6 +8,8 @@ import { ThemeContext } from "./context";
 import { ApolloProvider } from "@apollo/react-hooks";
 import client from "./components/product/client"
 import { Repository } from "./components/product/Repository";
+import { Experience } from "./components/experience/Experience";
+
 
 const App = () => {
   const theme = useContext(ThemeContext);
@@ -25,6 +27,7 @@ const App = () => {
       <ApolloProvider client={client}>
         <Repository/>
       </ApolloProvider>
+      <Experience/>
       <Contact />
     </div>
   );
