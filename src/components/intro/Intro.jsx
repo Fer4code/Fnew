@@ -12,16 +12,17 @@ const darkMode = theme.state.darkMode;
     <div className="i">
       <div className="i-left">
         <div className="i-left-wrapper">
-          <h2 className="i-intro">Hello, My name is</h2>
+          <h2 className="i-intro">Hi, My name is</h2>
           <h1 className="i-name">Fernando Martinez</h1>
           <div className="i-title">
             <div className="i-title-wrapper">
               <div className="i-title-item">Computer Engineer</div>
               <div className="i-title-item">Web Developer</div>
               <div className="i-title-item">AI developer</div>
-              <div className="i-title-item">Technical Support</div>
+              <div className="i-title-item">ReactJS</div>
+              <div className="i-title-item">Python</div>
               <div className="i-title-item">UI/UX Designer</div>
-              <div className="i-title-item">IT Security Analyst</div>
+              <div className="i-title-item">Technical Support</div>
             </div>
           </div>
           <p className="i-desc">
@@ -30,8 +31,8 @@ const darkMode = theme.state.darkMode;
         </div>
       </div>
       <div className="i-right">
-        <div className={darkMode ? 'i-bgd' : 'i-bg'}></div>
-        <img src={Me} alt="" className="i-img" />
+       <div className={darkMode ? 'i-bgd' : 'i-bg'}></div>
+         {/*<img src={Me} alt="" className="i-img" />*/}
       </div>
     </div>
   );

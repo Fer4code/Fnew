@@ -13,7 +13,7 @@ import "./product.css";
 
 const REPOSITORY_QUERY = gql`
 {
-  repositoryOwner(login: "F3RN4ND02") {
+  repositoryOwner(login: "Fer4code") {
     repositories(first:6, privacy:PUBLIC, isFork:false,  orderBy:{field: UPDATED_AT, direction: DESC}) {
       nodes {
         id
@@ -91,7 +91,7 @@ function Repository() {
     <Grid container spacing={4} className={darkMode ? 'r-bgd' : 'r-bg'} style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: '10%', paddingTop: '5%'}} justifyContent="center" justify="space-around" alignItems="center" alignContent="center">
       <Grid item md={11} >
       <Typography variant="h4" className={darkMode ? 't-bgd' : 't-bgl'} align="center">
-        You can Go to my GitHub Account or find my latest repos here
+        GitHub Account or my repos right below?
         </Typography>
       </Grid>
       
@@ -135,7 +135,7 @@ function Repository() {
             </Grid>
           </>
         ))}
-            <Typography variant="h6" className={darkMode ? 'stl-bdd' : 'st-bd'} style={{marginTop: "3%"}} >Provided by GitGraphQL API</Typography>
+            <Typography variant="h6" className={darkMode ? 'stl-bdd' : 'st-bd'} style={{marginTop: "3%"}} >Made with ❤ using GitGraphQL API</Typography>
 
     </Grid>
     </>

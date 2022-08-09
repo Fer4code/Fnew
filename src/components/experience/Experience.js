@@ -14,11 +14,12 @@ import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import { blue, red } from '@mui/material/colors';
 import DialogTitle from '@mui/material/DialogTitle';
-import img from '../../img/gs.png'
+import {img} from '../../img/gs.png'
 import AddCircleOutlineSharpIcon from '@mui/icons-material/AddCircleOutlineSharp';
 import Container from '@mui/material/Container'
 import Grid from '@mui/material/Grid'
 import { experience } from "./Data"
+
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -39,6 +40,7 @@ function Experience() {
   return (
     <div>
         <Container maxWidth="xl">
+        <Typography variant="h4" color="initial" className='title'>Work Experience</Typography>
 <Grid
   container
   spacing={6}
@@ -49,52 +51,53 @@ function Experience() {
   wrap="nowrap"
   
 >
+  
 {experience.map((data,key) => {
                                 return(
                                     <Grid item>
-<Card sx={{ maxWidth: 325 }}>
+
+<Card sx={{ minWidth: 350 }}>
       <CardHeader
         title={data.name}
         subheader={data.time}
       />
       <CardMedia
         component="img"
-        height="155"
-        image= {img}
+        height="180"
+        image= {data.img}
         alt="gs"
       />
       <CardContent>
         <Typography variant="body3" color="text.primary">
-          North-America Technical Support Engineer
+        {data.position}
         </Typography>
       </CardContent>
       <CardActions>
-      <Typography variant="h6" color="initial" style={{marginLeft:'70px'}} onClick={handleClickOpen}>See more</Typography>
-      <AddCircleOutlineSharpIcon variant="outlined" onClick={handleClickOpen} fontSize='large'/>
-      <Dialog
+      <Typography variant="h6" color="initial" style={{marginLeft:'70px'}} onClick={data.onclick}>See more</Typography>
+        <AddCircleOutlineSharpIcon variant="outlined" onClick={data.onclick} fontSize='large'/>
+        <Dialog
         open={open}
         TransitionComponent={Transition}
         keepMounted
-        onClose={handleClose}
+        onClose={data.hclose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Use Google's location service?"}</DialogTitle>
+        <DialogTitle>{data.position}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
+            {data.desc}
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose}>Agree</Button>
+          <Button onClick={data.hclose}>Awesome!</Button>
+
         </DialogActions>
       </Dialog>
       </CardActions>
     </Card>
 </Grid>
-                                )
-                            })}
+)
+})}
 </Grid>          
         </Container>
 

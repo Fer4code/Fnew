@@ -1,8 +1,12 @@
 import React from "react";
+
 import "./about.css";
 import Aboutpic from "../../img/ab.JPG";
+import ibm_badge from "../../img/ibmb.png"
 
 const About = () => {
+
+  
   return (
     <div className="a">
       <div className="a-left">
@@ -28,12 +32,11 @@ const About = () => {
          Things we believe, Things can be done.
         </p>
         <div className="a-award">
-          <img src={Aboutpic} alt="" className="a-award-img" />
+          <img src={ibm_badge} alt="" className="a-award-img" />
           <div className="a-award-texts">
-            <h4 className="a-award-title">International Design Awards 2021</h4>
+            <h4 className="a-award-title">IBM Award</h4>
             <p className="a-award-desc">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur autodit
-              and fugit.
+              IBM Professional Certificate about Applied Artificial Inteligence
             </p>
           </div>
         </div>
