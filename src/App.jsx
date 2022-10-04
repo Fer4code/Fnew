@@ -27,7 +27,7 @@ const App = () => {
       <ApolloProvider client={client}>
         <Repository/>
       </ApolloProvider>
-      {/*<Experience/>*/}
+      <Experience/>
       <Contact />
     </div>
   );
