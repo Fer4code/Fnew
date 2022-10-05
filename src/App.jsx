@@ -9,6 +9,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import client from "./components/product/client"
 import { Repository } from "./components/product/Repository";
 import { Experience } from "./components/experience/Experience";
+import { Education } from "./components/education/Education";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
       <ApolloProvider client={client}>
         <Repository/>
       </ApolloProvider>
+      <Education/>
       <Experience/>
       <Contact />
     </div>
