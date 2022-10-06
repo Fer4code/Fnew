@@ -48,10 +48,10 @@ const ExpandMore = styled((props) => {
       img={img}
       shortDesc='Applying the knowledge about VoIP, SIP, RFC, Working with clients about API integrations from servers to endpoints on differents platforms.'
       fullDescTitle ='Overview'
-      fullDescp1=''
-      fullDescp2=''
-      fullDescp3=''
-      fullDescp4=''
+      fullDescp1='The primary concern on this role is to deliver customer satisfaction when using the APIs for the different kind of services that offers API integrations, such as Remote Networking Managements platform (GWN.Cloud), PBX and remote device management platform(GDMS).'
+      fullDescp2='QA/UI review on new devices and run extensive tests to different kind of products.'
+      fullDescp3='Documented and contribute with the official documentation published.'
+      fullDescp4='Throubleshoot and guide clients to implement succesfully every device they would like to use to acheive their goal, applying knowledge about SIP, RFC 2863, Networking, Wireless Networking.'
       />
       <Cardex 
       job='Wireless Technical Support Lead'
@@ -59,10 +59,10 @@ const ExpandMore = styled((props) => {
       time='March 2021 - May 2021'
       img={fb}
       shortDesc='Deliver the best customer experience for the clients using Wireless internet subscriptions, using the Cambium Networks technology.'
-      fullDescTitle ='notOV'
-      fullDescp1=''
-      fullDescp2=''
-      fullDescp3=''
+      fullDescTitle ='Overview'
+      fullDescp1='Deploy, Implement, Throubleshoot the Wireless connection using Sector Antennas and CPE'
+      fullDescp2='Configure different kind of Routers, Access Points and Switches'
+      fullDescp3='Certified with Cambium Networks Technology - For Wireless Deployments'
       fullDescp4=''
       />
       <Cardex 
@@ -71,8 +71,8 @@ const ExpandMore = styled((props) => {
       time='Jan 2021 - March 2021'
       img={fb}
       shortDesc='Install, manage and configure different kind of antennas to provide the best experience for end-users and companies through the Wireless ISP.'
-      fullDescTitle ='notOV'
-      fullDescp1=''
+      fullDescTitle ='Overview'
+      fullDescp1='Certified with Cambium Networks Technology - For Wireless Deployments'
       fullDescp2=''
       fullDescp3=''
       fullDescp4=''
