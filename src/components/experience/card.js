@@ -32,7 +32,7 @@ const ExpandMore = styled((props) => {
   };
 
   return (
-    <Grid item align='center' >
+    <Grid item align='center' md={4} s={11} >
     <Card sx={{ maxWidth: 300 }}>
       <CardHeader sx={{ pt:1, pl:2, pr:1, pb:0}}
         disableTypography ='true'
@@ -80,17 +80,17 @@ const ExpandMore = styled((props) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>{props.fullDescTitle}</Typography>
-          <Typography paragraph>
+          <Typography align= 'center' gutterBottom = 'false' paragraph style={{ fontWeight: 600 }}>{props.fullDescTitle}</Typography>
+          <Typography align= 'justify' gutterBottom = 'false' paragraph>
             {props.fullDescp1}
           </Typography>
-          <Typography paragraph>
+          <Typography align= 'justify' gutterBottom = 'false' paragraph>
           {props.fullDescp2}
           </Typography>
-          <Typography paragraph>
+          <Typography align= 'justify' gutterBottom = 'false' paragraph>
           {props.fullDescp3}
           </Typography>
-          <Typography>
+          <Typography align= 'justify' gutterBottom = 'false' paragraph>
           {props.fullDescp4}
           </Typography>
         </CardContent>

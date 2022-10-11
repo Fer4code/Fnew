@@ -44,7 +44,7 @@ function Repository() {
   const { data, loading, error } = useQuery(REPOSITORY_QUERY);
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
-  console.log(error)
+  console.log(data)
   if (error) return (
     <>
     <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
