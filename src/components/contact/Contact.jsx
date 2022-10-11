@@ -6,6 +6,7 @@ import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
 import Address from "../../img/address.png";
 import emailjs from "emailjs-com";
+import Button from '@mui/material/Button';
 
 
 const Contact = () => {
@@ -39,7 +40,7 @@ const Contact = () => {
       <div className="c-bg"></div>
       <div className="c-wrapper">
         <div className="c-left">
-          <h1 className="c-title">We can discuss your project & doubts</h1>
+          <h1 className="c-title">I think that a webpage can not fully describe a person, feel free to contact me</h1>
           <div className="c-info">
             <div className="c-info-item">
               <img src={Phone} alt="" className="c-icon" />
@@ -47,7 +48,7 @@ const Contact = () => {
             </div>
             <div className="c-info-item">
               <img className="c-icon" src={Email} alt="" />
-              contact@ferm.dev
+              
             </div>
             <div className="c-info-item">
               <img className="c-icon" src={Address} alt="" />
@@ -64,7 +65,9 @@ const Contact = () => {
             <input className={darkMode ? 'input-dm' : 'input'}type="text" placeholder="Subject" name="user_subject" />
             <input className={darkMode ? 'input-dm' : 'input'} type="email" placeholder="Email" name="user_email" />
             <textarea className={darkMode ? 'input-dm' : 'input'} rows="5" placeholder="Message" name="message" />
-            <button>Submit</button>
+            <Button variant="contained" color="success" size='large'>
+              Submit
+            </Button>
             {done && "Thank you..."}
           </form>
         </div>
