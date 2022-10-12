@@ -29,6 +29,10 @@ const About = () => {
          I do think that technology is our greattest resource now and will be in the future, as Engineer
          things can not be taken for granted.
 
+         I consider myself as a doer, if there is something I would like to achieve I will seek of that, focused and motivated with, I am the kind of person that
+         will look forward improve, for myself for personal life and for work, if working with a team commited to achieve a common goal, I beleive the team should
+         also improved.
+
          Things we believe, Things can be done.
         </p>
         <div className="a-award">

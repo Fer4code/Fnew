@@ -53,7 +53,7 @@ const Contact = () => {
 
   return (
     <div className="c">
-      <div className="c-bg"></div>
+      
       <div className="c-wrapper">
         <div className="c-left">
           <h1 className="c-title">I think that a webpage can not fully describe a person, please contact me!</h1>
@@ -66,7 +66,7 @@ const Contact = () => {
             </div>
             <div className="c-info-item">
               <img className="c-icon" src={Address} alt="" />
-              <Typography style={{ fontWeight: 600 }}> Valencia, Venezuela</Typography>
+              <Typography style={{ fontWeight: 600 }}> Valencia, Venezuela.</Typography>
             </div>
           </div>
         </div>

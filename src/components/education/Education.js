@@ -69,7 +69,7 @@ const ExpandMore = styled((props) => {
     justify="center"
     alignItems="center"
     justifyContent="center"
-    style={{margin: '30px'}}
+    style={{margin: '0px', padding: '30px'}}
     >
       <Grid item>
       <Typography variant="h5" color="initial" align='center' >Courses</Typography>
