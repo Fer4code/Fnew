@@ -1,5 +1,5 @@
 import "./intro.css";
-import Me from "../../img/638.jpg";
+import Me from "../../img/638c.jpg";
 import { ThemeContext } from '../../context'
 import React,{ useContext } from "react";
 
@@ -12,6 +12,7 @@ const darkMode = theme.state.darkMode;
     <div className="i">
       <div className="i-left">
         <div className="i-left-wrapper">
+        <img src={Me} alt="" className="i-img" />
           <h2 className="i-intro">Hi, My name is</h2>
           <h1 className="i-name">Fernando Martinez</h1>
           <div className="i-title">
@@ -30,10 +31,10 @@ const darkMode = theme.state.darkMode;
           </p>
         </div>
       </div>
-      <div className="i-right">
+      {/* <div className="i-right">
        <div className={darkMode ? 'i-bgd' : 'i-bg'}></div>
-         {/*<img src={Me} alt="" className="i-img" />*/}
-      </div>
+         
+      </div> */}
     </div>
   );
 };

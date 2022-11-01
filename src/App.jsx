@@ -24,13 +24,13 @@ const App = () => {
     >
      <Toggle />
       <Intro />
-      {/*<About />
+      <About />
       <ApolloProvider client={client}>
         <Repository/>
-    </ApolloProvider> */}
-      {/*<Education/>
+    </ApolloProvider> 
+      <Education/>
       <Experience/> 
-      <Contact />*/}
+      <Contact />
     </div>
   );
 };

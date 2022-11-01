@@ -52,11 +52,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="c">
-      
+    <div className="c"> 
       <div className="c-wrapper">
         <div className="c-left">
-          <h1 className="c-title">I think that a webpage can not fully describe a person, please contact me!</h1>
+          <h1 className="c-title">I beleive that a webpage can not fully describe a person, please contact me!</h1>
           <div className="c-info">
             <div className="c-info-item">
               <img src={Phone} alt="" className="c-icon" />
@@ -90,7 +89,7 @@ const Contact = () => {
       >
         <DialogContent>
           <Alert variant="outlined" severity="success">
-            Thanks for contacting me, I will be reaching you inmediately!
+            Thanks for contacting me, I will be reaching you shortly!
           </Alert>
         </DialogContent>
       </Dialog>
