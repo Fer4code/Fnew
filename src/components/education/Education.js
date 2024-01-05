@@ -35,14 +35,6 @@ const ExpandMore = styled((props) => {
     wrap="nowrap"
 
     >
- <Cardex 
-      edu='Computer Engineer'
-      inst='Universidad José Antonio Páez'
-      time='Oct 2016 - Jun 2020'
-      img=''
-      shortDesc='Applying the knowledge about VoIP, SIP, RFC, Working with clients about API integrations from servers to endpoints on differents platforms.'
-  
-      />
     </Grid>
     <Cardex 
       edu='Computer Engineer'
@@ -64,30 +56,7 @@ const ExpandMore = styled((props) => {
 
     >
      
-      <Cardex 
-      edu='Wireless Technical Support Lead'
-      inst='Fibex Telecom, CA'
-      time='March 2021 - May 2021'
-      img=''
-      shortDesc='Deliver the best customer experience for the clients using Wireless internet subscriptions, using the Cambium Networks technology.'
-      fullDescTitle ='notOV'
-      fullDescp1=''
-      fullDescp2=''
-      fullDescp3=''
-      fullDescp4=''
-      />
-      <Cardex 
-      edu='Wireless Technical Installer'
-      inst='Fibex Telecom, CA'
-      time='Jan 2021 - March 2021'
-      img=''
-      shortDesc='Install, manage and configure different kind of antennas to provide the best experience for end-users and companies through the Wireless ISP.'
-      fullDescTitle ='notOV'
-      fullDescp1=''
-      fullDescp2=''
-      fullDescp3=''
-      fullDescp4=''
-      />
+      
     </Grid>          
         </Container>
 
