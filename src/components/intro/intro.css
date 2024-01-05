@@ -4,11 +4,11 @@
 }
 
 .i-left {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   /*background-color: #9be2f2;*/
+  
 }
 
 .i-right {
@@ -96,26 +96,22 @@
 }
 
 /*.i-img {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  margin-left: 17rem;
-  margin-top: 120px;
-  position: absolute;
-  border-radius: 1rem;
+      display: block;
+    object-fit: cover;
+    border-radius: 45%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }*/
 @media only screen and (min-width: 1200px) {
-  /* For desktop:*/
+  /* For desktop: */
   .i-img {
     display: block;
-    margin-left: 25rem;
-    margin-right: auto;
-    margin-top: 30px;
-    width: 100%;
-    max-width: 200px;
     object-fit: cover;
-    position: absolute;
-    border-radius: 1rem;
+   border-radius: 0 50% 50% 50%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    margin-top: 40px;
   }
 }
 @media screen and (min-width: 680px) {
@@ -130,8 +126,23 @@
     text-align: center;
     height: 100%;
   }
+  .i-img {
+    display: block;
+    object-fit: cover;
+   border-radius: 0 50% 50% 50%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    border: 3px solid rgb(0, 0, 0);
+  }
 
-  /*For mobile: */
+  .i-name {
+    font-size: 50px;
+  }
+  .i-desc {
+    font-size: 30px;
+  }
+
+  /*For mobile: 
   .i-img {
     display: block;
     margin-left: 18rem;
@@ -141,7 +152,7 @@
     object-fit: cover;
     position: absolute;
     border-radius: 1rem;
-  }
+  }*/
 }
 
 @media screen and (min-width: 400px) {
@@ -156,16 +167,48 @@
     text-align: center;
     height: 100%;
   }
-
-  /* For mobile:
   .i-img {
     display: block;
-    margin-left: 9rem;
-    margin-right: auto;
-    margin-top: 1.5rem;
-    width: 50%;
     object-fit: cover;
-    position: absolute;
-    border-radius: 1rem;
-  }*/
+   border-radius: 0 50% 50% 50%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    border: 3px solid rgb(0, 0, 0);
+  }
+
+  .i-name {
+    font-size: 50px;
+  }
+  .i-desc {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .i {
+    flex-direction: column;
+  }
+
+  .i-left-wrapper {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+  .i-img {
+    display: block;
+    object-fit: cover;
+   border-radius: 0 50% 50% 50%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    border: 3px solid rgb(0, 0, 0);
+  }
+
+  .i-name {
+    font-size: 50px;
+  }
+  .i-desc {
+    font-size: 30px;
+  }
 }

@@ -44,7 +44,7 @@ function Repository() {
   const { data, loading, error } = useQuery(REPOSITORY_QUERY);
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
-  console.log(error)
+  console.log(data)
   if (error) return (
     <>
     <Grid container spacing={4} style={{minWidth: "100vh", padding: "10%"}} justify="space-around" alignItems="center">
@@ -88,7 +88,7 @@ function Repository() {
 
   return (
     <>
-    <Grid container spacing={4} className={darkMode ? 'r-bgd' : 'r-bg'} style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: '10%', paddingTop: '5%'}} justifyContent="center" justify="space-around" alignItems="center" alignContent="center">
+    <Grid container spacing={4} className={darkMode ? 'r-bgd' : 'r-bg'} style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: '7px', paddingTop: '7px'}} justifyContent="center" justify="space-around" alignItems="center" alignContent="center">
       <Grid item md={11} >
       <Typography variant="h4" className={darkMode ? 't-bgd' : 't-bgl'} align="center">
         GitHub Account or my repos right below?

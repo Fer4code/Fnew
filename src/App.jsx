@@ -22,14 +22,14 @@ const App = () => {
         color: darkMode && "white",
       }}
     >
-    <Toggle />
+     <Toggle />
       <Intro />
       <About />
       <ApolloProvider client={client}>
         <Repository/>
-      </ApolloProvider>
+    </ApolloProvider> 
       <Education/>
-      <Experience/>
+      <Experience/> 
       <Contact />
     </div>
   );
